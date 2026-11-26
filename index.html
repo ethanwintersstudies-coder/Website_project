@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Dev Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="top-bar">
+      <h1>Web Dev Quiz</h1>
+      <button id="theme-btn" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Screen 1: Start -->
+    <section id="start-screen" class="screen">
+      <p>Test your HTML, CSS and JavaScript basics with 10 questions.</p>
+      <p class="best">Best score: <strong id="best-score">none yet</strong></p>
+      <p class="hint">Tip: press 1-4 to answer and Enter to continue.</p>
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </section>
+
+    <!-- Screen 2: Quiz (questions are drawn by script.js) -->
+    <section id="quiz-screen" class="screen hidden">
+      <div class="progress"><div id="progress-bar"></div></div>
+      <p id="counter" class="counter"></p>
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+      <button id="next-btn" class="btn hidden">Next</button>
+    </section>
+
+    <!-- Screen 3: Result -->
+    <section id="result-screen" class="screen hidden">
+      <h2>Quiz finished!</h2>
+      <p id="score-text" class="big"></p>
+      <p id="message" class="message"></p>
+      <button id="restart-btn" class="btn">Restart</button>
+      <h3>Review</h3>
+      <ul id="review-list" class="review"></ul>
+    </section>
+  </main>
+</body>
+</html>
